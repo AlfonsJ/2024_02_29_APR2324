@@ -1,0 +1,10 @@
+digraph { rankdir=LR; splines=false;
+{rank=same x0[label=1] x[label=x]}
+{rank=same z0[label=1] z[label="z"]}
+{rank=same y0[shape=none label=""] y[label=y]}
+x0->z[label=<<i>b<sub>1</sub></i>>]
+x->z[label=<<i>w</i>>]
+z0->y[label=<<i>b<sub>2</sub></i>>]
+z->y[label=<<i>v</i>>]
+edge[style=invis] x0->x z0->z y0->y x0->z0 z0->y0
+}
