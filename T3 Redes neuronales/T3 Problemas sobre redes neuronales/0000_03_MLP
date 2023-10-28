@@ -1,0 +1,8 @@
+digraph { rankdir=LR; splines=false; node[shape=circle fontsize=12]
+{rank=same x0[label=1] x1[label=<<i>x<sub>1</sub></i>>] xvdots[shape=none label="&#8942;"] 
+xn[label=<<i>x<sub>n</sub></i>>]}
+{rank=same h0[label=1] h1[label=<<i>h<sub>1</sub></i>>] hvdots[shape=none label="&#8942;"] 
+hm[label=<<i>h<sub>m</sub></i>>]}
+y[label=y] {x0 x1 xn} -> {h1 hm} -> y; h0 -> y
+edge[style=invis] x0->x1->xvdots->xn h0->h1->hvdots->hm x0->h0
+}
