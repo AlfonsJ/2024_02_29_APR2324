@@ -1,11 +1,16 @@
 digraph { rankdir=LR; node [shape=plaintext];
 Polución [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-<TR><TD COLSPAN="2">Polución</TD></TR><TR><TD>bajo</TD><TD>alto</TD></TR>
+<TR><TD COLSPAN="2">P(P)</TD></TR>
+<TR><TD COLSPAN="2">Polución</TD></TR>
+<TR><TD>bajo</TD><TD>alto</TD></TR>
 <TR><TD>0.9</TD><TD>0.1</TD></TR></TABLE>>];
 Fumador [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-<TR><TD COLSPAN="2">Fumador</TD></TR><TR><TD>no</TD><TD>sí</TD></TR>
+<TR><TD COLSPAN="2">P(F)</TD></TR>
+<TR><TD COLSPAN="2">Fumador</TD></TR>
+<TR><TD>no</TD><TD>sí</TD></TR>
 <TR><TD>0.7</TD><TD>0.3</TD></TR></TABLE>>];
 Cáncer [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="4">P(C | P, F)</TD></TR>
 <TR><TD COLSPAN="2"></TD><TD COLSPAN="2">Cáncer</TD></TR>
 <TR><TD>Polución</TD><TD>Fumador</TD><TD>negativo</TD><TD>positivo</TD></TR>
 <TR><TD>bajo</TD><TD>no</TD><TD>0.999</TD><TD>0.001</TD></TR>
@@ -14,12 +19,14 @@ Cáncer [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
 <TR><TD>alto</TD><TD>sí</TD><TD>0.920</TD><TD>0.080</TD></TR>
 </TABLE>>];
 RayosX [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="4">P(X | C)</TD></TR>
 <TR><TD></TD><TD COLSPAN="3">Rayos X</TD></TR>
 <TR><TD>Cáncer</TD><TD>negativo</TD><TD>dudoso</TD><TD>positivo</TD></TR>
 <TR><TD>negativo</TD><TD>0.80</TD><TD>0.10</TD><TD>0.10</TD></TR>
 <TR><TD>positivo</TD><TD>0.10</TD><TD>0.20</TD><TD>0.70</TD></TR>
 </TABLE>>];
 Disnea [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="3">P(D | C)</TD></TR>
 <TR><TD></TD><TD COLSPAN="2">Disnea</TD></TR>
 <TR><TD>Cáncer</TD><TD>no</TD><TD>sí</TD></TR>
 <TR><TD>negativo</TD><TD>0.70</TD><TD>0.30</TD></TR>
