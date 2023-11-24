@@ -1,0 +1,26 @@
+digraph { rankdir=LR; node [shape=plaintext];
+Lluvia [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="2">P(L)</TD></TR>
+<TR><TD COLSPAN="2">Lluvia</TD></TR>
+<TR><TD>no llueve</TD><TD>sí llueve</TD></TR>
+<TR><TD>0.8</TD><TD>0.2</TD></TR>
+</TABLE>>];
+Aspersor [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="3">P(A | L)</TD></TR>
+<TR><TD></TD><TD COLSPAN="2">Aspersor</TD></TR>
+<TR><TD>Lluvia</TD><TD>parado</TD><TD>funciona</TD></TR>
+<TR><TD>no llueve</TD><TD>0.60</TD><TD>0.40</TD></TR>
+<TR><TD>sí llueve</TD><TD>0.99</TD><TD>0.01</TD></TR>
+</TABLE>>];
+Césped [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="4">P(C | L, A)</TD></TR>
+<TR><TD COLSPAN="2"></TD><TD COLSPAN="2">Césped</TD></TR>
+<TR><TD>Lluvia</TD><TD>Aspersor</TD><TD>reseco</TD><TD>mojado</TD></TR>
+<TR><TD>no llueve</TD><TD>parado</TD><TD>1.00</TD><TD>0.00</TD></TR>
+<TR><TD>no llueve</TD><TD>funciona</TD><TD>0.10</TD><TD>0.90</TD></TR>
+<TR><TD>sí llueve</TD><TD>parado</TD><TD>0.20</TD><TD>0.80</TD></TR>
+<TR><TD>sí llueve</TD><TD>funciona</TD><TD>0.01</TD><TD>0.99</TD></TR>
+</TABLE>>];
+Lluvia -> Aspersor -> Césped
+Lluvia -> Césped
+}
