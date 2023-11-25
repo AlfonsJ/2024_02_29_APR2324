@@ -1,0 +1,1 @@
+digraph {rankdir=TB; x[label=<<B><I>x</I></B>>] c->x}
