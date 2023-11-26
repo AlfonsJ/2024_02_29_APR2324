@@ -1,6 +1,3 @@
 digraph {rankdir=TB; splines=false;
-{rank=same x1[label=<<i>x<sub>1</sub></i>>]
-xdots[shape=none label="&hellip;"]
-xD[label=<<i>x<sub>D</sub></i>>]}
-c->{x1,xD} c->xdots[style=invis]
-}
+{rank=same x1[label=<<i>x<sub>1</sub></i>>] xdots[shape=none label="&hellip;"] xD[label=<<i>x<sub>D</sub></i>>]}
+c->{x1,xD} c->xdots[style=invis]}
