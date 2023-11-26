@@ -1,0 +1,7 @@
+digraph {rankdir=BT; splines=false;
+{rank=same q1[label=<<i>q<sub>1</sub></i>>] q2[label=<<i>q<sub>2</sub></i>>]
+qdots[shape=none label="&hellip;"] qT[label=<<i>q<sub>T</sub></i>>]}
+{rank=same x1[label=<<i>x<sub>1</sub></i>>] x2[label=<<i>x<sub>2</sub></i>>]
+xdots[shape=none label="&hellip;"] xT[label=<<i>x<sub>T</sub></i>>]}
+q1->q2->qdots->qT; q1->x1 q2->x2 qdots->xdots [style=invis] qT->xT
+}
