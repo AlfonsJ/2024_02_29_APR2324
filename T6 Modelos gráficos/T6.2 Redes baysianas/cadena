@@ -1,0 +1,3 @@
+digraph {rankdir=TB; splines=false; {rank=same x1[label=<<i>x<sub>1</sub></i>>]
+x2[label=<<i>x<sub>2</sub></i>>] xdots[shape=none label="&hellip;"] xT[label=<<i>x<sub>T</sub></i>>]} x1->x2->xdots->xT
+}
