@@ -1,0 +1,1 @@
+digraph {rankdir=LR; c->{b,a} b->a}
