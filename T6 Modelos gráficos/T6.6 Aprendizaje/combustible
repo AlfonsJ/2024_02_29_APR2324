@@ -1,0 +1,24 @@
+digraph { rankdir=LR; node [shape=plaintext];
+Bateria [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="2">P(B)</TD></TR>
+<TR><TD COLSPAN="2">Batería (B)</TD></TR>
+<TR><TD>0 (descargada)</TD><TD>1 (cargada)</TD></TR>
+<TR><TD><i>p0</i></TD><TD><i>p1</i></TD></TR>
+</TABLE>>];
+Combustible [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="2">P(C)</TD></TR>
+<TR><TD COLSPAN="2">Combustible (C)</TD></TR>
+<TR><TD>0 (vacío)</TD><TD>1 (lleno)</TD></TR>
+<TR><TD>0.1</TD><TD>0.9</TD></TR>
+</TABLE>>];
+Indicador [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD COLSPAN="4">P(I | B, C)</TD></TR>
+<TR><TD COLSPAN="2"></TD><TD COLSPAN="2">Indicador (I)</TD></TR>
+<TR><TD>B</TD><TD>C</TD><TD>0 (vacío)</TD><TD>1 (lleno)</TD></TR>
+<TR><TD>0</TD><TD>0</TD><TD>0.9</TD><TD>0.1</TD></TR>
+<TR><TD>0</TD><TD>1</TD><TD>0.8</TD><TD>0.2</TD></TR>
+<TR><TD>1</TD><TD>0</TD><TD>0.8</TD><TD>0.2</TD></TR>
+<TR><TD>1</TD><TD>1</TD><TD>0.2</TD><TD>0.8</TD></TR>
+</TABLE>>];
+{Bateria, Combustible} -> Indicador
+}
